@@ -1,0 +1,26 @@
+.health-indicator {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.indicator-value {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--brand-primary);
+}
+
+.indicator-label {
+  color: var(--neutral-500);
+  font-size: var(--font-size-sm);
+}
+
+@media (prefers-color-scheme: dark) {
+  .health-indicator {
+    background-color: var(--neutral-600);
+  }
+  
+  .indicator-label {
+    color: var(--neutral-300);
+  }
+}

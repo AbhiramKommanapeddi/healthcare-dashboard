@@ -1,0 +1,59 @@
+:root {
+  --font-size-xs: 0.75rem;   /* Extra small text */
+  --font-size-sm: 0.875rem;  /* Small text */
+  --font-size-md: 1rem;      /* Base text size */
+  --font-size-lg: 1.125rem;  /* Large text */
+  --font-size-xl: 1.25rem;   /* Extra large text */
+  --spacing-unit: 0.25rem;  /* Base unit - increase/decrease to scale all spaces */
+  /* This will automatically update all derived spacing values:
+  --space-1: 0.25rem  (1 × spacing-unit)
+  --space-2: 0.5rem   (2 × spacing-unit)
+  --space-3: 0.75rem  (3 × spacing-unit)
+  --space-4: 1rem     (4 × spacing-unit)
+  --space-5: 1.25rem  (5 × spacing-unit)
+  --space-6: 1.5rem   (6 × spacing-unit) */
+  
+  --transition-duration-fast: 150ms;    /* Quick animations */
+  --transition-duration-normal: 250ms;   /* Standard animations */
+  --transition-duration-slow: 350ms;     /* Slower animations */
+  --transition-timing: cubic-bezier(0.4, 0, 0.2, 1);  /* Animation easing */
+}
+
+  --brand-50: #e3f2fd;  /* Lightest shade */
+  --brand-100: #bbdefb;
+  --brand-200: #90caf9;
+  --brand-300: #64b5f6;
+  --brand-400: #42a5f5;
+  --brand-500: #2196f3;  /* Primary brand color */
+  --brand-600: #1e88e5;
+  --brand-700: #1976d2;  /* Darkest shade */
+}
+
+@import './styles/utils/variables.css';
+@import './styles/components/Header.css';
+@import './styles/components/Dashboard.css';
+@import './styles/components/HealthIndicators.css';
+
+/* Global Styles */
+body {
+  font-family: var(--font-family);
+  background-color: var(--neutral-200);
+  color: var(--neutral-700);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Accessibility */
+:focus-visible {
+  outline: 3px solid var(--brand-primary);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

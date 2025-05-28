@@ -1,0 +1,17 @@
+.header {
+  background-color: var(--neutral-100);
+  box-shadow: var(--shadow-sm);
+  padding: var(--spacing-md);
+}
+
+.header-title {
+  color: var(--neutral-700);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .header * {
+    transition: none !important;
+  }
+}
